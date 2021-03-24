@@ -7,44 +7,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lisa Jones Portfolio</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
+    
 </head>
 
 <body>
-    <header class="navigation">
+    <header class="navigation sticky">
         <div class="lisaLogoBox">
-            <img class="lisaLogo" src="images/Logo.svg">
+            <img class="lisaLogo" id="linkClicked" src="images/Logo.svg">
             <div class="lisaLogo_text">            
                 <p class="boldText">Lisa Jones</p>
                 <p>UX/UI Designer</p></div>
             </div>
-        <nav class="navLinks icon_hamburger1">
-            <a href="#"></a>
-            <ul>
-                <li>about</li>
-                <li>skills</li>
-                <li>work</li>
-                <li>contact</li>
-            </ul>
 
-<!-- HAMBERGER MENU ------------
-            <div class="container">
-                <input type="checkbox" id="checkbox3" class="checkbox3 visuallyHidden">
-                <label for="checkbox3">
-                    <div class="hamburger hamburger3">
-                        <span class="bar bar1"></span>
-                        <span class="bar bar2"></span>
-                        <span class="bar bar3"></span>
-                        <span class="bar bar4"></span>
-                    </div>
-                </label>
-            </div>
--->
 
-        </nav>
+        <nav class="navLinks">
+            <div class="dropdown">
+                <button class="dropbtn"> 
+                  <a href="#workContainer">work   <i class="fa fa-caret-down"></i></a>
+                  
+                </button>
+                <div class="dropdown-content">
+                  <a href="#">Beyond Blue</a>
+                  <a href="#">AIATSIS.gov.au</a>
+                  <a href="#">MarkIt</a>
+                </div>
+              </div> 
+            <a href="#skillsContainer">skills</a>
+            <a href="#">about</a></li>
+            <a href="#contact">contact</a>
+            
+          </nav>
+          
     </header>
+    
+    <div class="spacer"  id="arrowLink"></div>
     <main class="main">
         <div class="bgImageMobile">
             <section class="sectionHero">
@@ -152,7 +152,11 @@
                     
 
                 </div>
+                <div class="arrowsAlign"><a href="#arrowLink">
+                    <img  class="arrowTop" src="images/arrowGreen.svg"></a>
+                </div>
             </div>
+            
         </section>
         <section class="software">
             <h2 class="text_center">Software</h2>
@@ -246,6 +250,9 @@
                     </div>
                 </div>    
             <h2 class="text_center">View all projects</h2>
+            <div class="arrowsAlign"><a href="#arrowLink">
+                <img  class="arrowTop" src="images/arrowWhite.svg"></a>
+            </div>
             </div>
             
         </section>
@@ -270,7 +277,7 @@
 
 
 
-    <footer>
+    <footer id="contact">
         <ul>
             <li>about</li>
             <li>skills</li>
@@ -288,5 +295,10 @@
     </header>
 
 </body>
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+<script src="js/index.js"></script>
 
 </html>

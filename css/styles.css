@@ -4,6 +4,35 @@
     padding: 0;
     font-family: 'Montserrat', sans-serif;
     }
+html {
+    scroll-behavior: smooth;
+    }
+
+
+    /* TYPOGRAPHY */
+
+h1 {
+    font-weight: 900;
+    font-size: 3rem;
+}
+h2 {
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 15px;
+    margin-top: 30px;
+}
+h3 {
+    font-weight: 500;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+p {
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+li {
+    line-height: 1.5;
+}
 
 
 /* HEADER */
@@ -15,7 +44,16 @@
     display: flex;
     justify-content: space-between;
     height: 100px;
+    z-index: 20;
 }
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+
+
 .inline-block {
     display: inline-block;
 }
@@ -34,32 +72,131 @@
     margin-bottom: 30px;
     position: absolute;
     top: 25px;
-
-
 }
 .boldText {
     font-weight: 700;
     font-size: 1.2rem;
     margin-bottom: 0;
 }
-.navLinks {
-    width: 400px;
-    margin-right: 5%;
-    height: 100%;
-}
-.navLinks li {
-    float: right;
-    padding-left: 30px;
-    padding-top: 40px;
 
+
+.navLinks {
+    overflow: hidden;
+    width: 400px;
+    float: right;
 }
+.navLinks a {
+    float: left;
+    font-size: 16px;
+    color: #330033;
+    text-align: center;
+    padding: 41px 16px;
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+
+
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+ 
+  
+  .dropdown .dropbtn {
+    font-size: 14px;  
+    border: none;
+    outline: none;
+    padding: 0;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+  
+  .navLinks a:hover {
+    background-color: rgba(66,1,65,0.2);
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100px;
+    background-color: rgba(255, 255, 255, 0.95);
+    color: #330033;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.15);
+    z-index: 1;
+  }
+
+  
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    margin: 0;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: rgba(66,1,65,0.2);
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+
+
+  /*
+
 .navLinks ul {
     height: 30px;
-    float: right;
-    list-style: none 
+    list-style: none; 
+    margin: 0;
+    padding-left: 0;
 }
+.navLinks li {
+    display: block;
+    background-color: white;
+    color: red;
+    float: left;
+    padding: 40px 16px 16px 16px;
+    position: relative;
+    transition-duration: 0.5s;
+    height: 44px;
+}
+.linkClicked {
+    border: 1px solid red;
+}
+
+
+.navLinks li:hover {
+    background-color: #330033;
+    color: white;
+    padding: 40px 16px 16px 16px;
+    text-decoration: none;
+    transition-duration: 0.5s;
+    height: 44px;
+}
+.navLinks a:hover {
+    color: white;
+}
+
+
+
 .icon_hamburger1 {
-    background-image: none;
+    padding: 0px;
+    margin: 0px;
+}
+*/
+.arrowTop {
+    height: 40px;
+    float: right;
+    margin: 40px;
+
+
 }
 
 
@@ -72,10 +209,15 @@
     background-repeat: no-repeat;
     background-position: top center;
 }
+.spacer {
+    height: 100px;
+    width: 100%;
+}
 
 
 /* HERO IMAGE */
 .sectionHero {
+    min-height: 700px;
     height: 100%;
     width: 80%;
     margin: 0 auto;
@@ -100,31 +242,7 @@
 }
 
 
-/* TYPOGRAPHY */
 
-h1 {
-    font-weight: 900;
-    font-size: 3rem;
-}
-h2 {
-    font-weight: 700;
-    font-size: 2rem;
-    margin-bottom: 15px;
-    margin-top: 30px;
-}
-h3 {
-    font-weight: 500;
-    font-size: 1.3rem;
-    margin-bottom: 15px;
-}
-p {
-    line-height: 1.5;
-    margin-bottom: 10px;
-}
-li {
-    line-height: 1.5;
-    margin-left: 20px;
-}
 
 .mySkills h1  {
     color: #60EFDE;
@@ -151,7 +269,7 @@ li {
 /* BUTTON */
 
 
-button {
+.heroText button, .projectInfo button {
     padding: 10px;
     font-size: 1rem;
     background-color: #330033;
@@ -161,7 +279,6 @@ button {
     font-weight: 700;
     margin-left: 10px;
     cursor: pointer;
-
 }
 
 
@@ -191,8 +308,9 @@ button {
     background-color: white;
     width: 33%;
     margin-right: 20px;
-
-
+}
+.flex_item li {
+    margin-left: 30px;
 }
 
 .imageDiv { 
@@ -339,13 +457,13 @@ footer li {
 
     .navLinks {
         width: 50px;
-        margin-right: 5%;
         height: 100%;
 
     }
     .navLinks li {
         display: none;
     }
+    
     .icon_hamburger1 {
         background-image: url(../images/icon_hamburger.svg);
         background-repeat: no-repeat;
@@ -465,6 +583,7 @@ footer li {
 
         margin-top: 20px;
     }
+    
 
     footer ul {
         width: 80%;
@@ -475,7 +594,7 @@ footer li {
         padding-right: 2%;
         padding-left: 2%;
     }
-    }
+    
     
 
 /*
